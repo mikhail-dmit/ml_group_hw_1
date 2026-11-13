@@ -1,0 +1,586 @@
+{
+  "pdf": "dmitrenko_mikhail_session1_report.pdf",
+  "total_pages": 6,
+  "content_pages": 5,
+  "references_start_page": 6,
+  "page_size": "A4",
+  "all_required_placeholders_present": true,
+  "numbers": {
+    "full_users": {
+      "value": 10404,
+      "rendered": "10,404",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "nonempty_users": {
+      "value": 1178,
+      "rendered": "1,178",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "empty_users": {
+      "value": 9226,
+      "rendered": "9,226",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "eligible_assets": {
+      "value": 767,
+      "rendered": "767",
+      "source": "outputs/repeat_analysis/summary.json"
+    },
+    "latest_all": {
+      "value": 0.05263282198045577,
+      "rendered": "0.0526",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "mix_tfidf_all": {
+      "value": 0.052960582728838156,
+      "rendered": "0.0530",
+      "source": "outputs/fill_mixture/test_june/metrics.json"
+    },
+    "oracle_all": {
+      "value": 0.06372421233099242,
+      "rendered": "0.0637",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "repeat_pairs": {
+      "value": 1548,
+      "rendered": "1,548",
+      "source": "outputs/repeat_analysis/summary.json"
+    },
+    "new_pairs": {
+      "value": 1008,
+      "rendered": "1,008",
+      "source": "outputs/repeat_analysis/summary.json"
+    },
+    "repeat_pair_pct": {
+      "value": 60.563380281690144,
+      "rendered": "60.6",
+      "source": "outputs/repeat_analysis/summary.json"
+    },
+    "fill_users": {
+      "value": 9553,
+      "rendered": "9,553",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "active_fill_users": {
+      "value": 726,
+      "rendered": "726",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fixed_repeat_hits": {
+      "value": 1298,
+      "rendered": "1,298",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "validation_users": {
+      "value": 10178,
+      "rendered": "10,178",
+      "source": "outputs/fill_mixture/selection.json"
+    },
+    "validation_nonempty": {
+      "value": 1627,
+      "rendered": "1,627",
+      "source": "outputs/fill_mixture/selection.json"
+    },
+    "chosen_lambda": {
+      "value": 1.0,
+      "rendered": "1",
+      "source": "outputs/report_build/model_plan.json and outputs/fill_mixture/selection.json"
+    },
+    "random_std": {
+      "value": 4.580195289675472e-05,
+      "rendered": "0.000046",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "random_seeds": {
+      "value": 30,
+      "rendered": "30",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "cutoff": {
+      "value": "2021-06-01",
+      "rendered": "2021-06-01",
+      "source": "outputs/baseline_full_warm/protocol.json"
+    },
+    "end_exclusive": {
+      "value": "2021-07-01",
+      "rendered": "2021-07-01",
+      "source": "outputs/baseline_full_warm/protocol.json"
+    },
+    "validation_cutoff": {
+      "value": "2021-05-01",
+      "rendered": "2021-05-01",
+      "source": "outputs/fill_mixture/selection.json"
+    },
+    "validation_end": {
+      "value": "2021-05-31",
+      "rendered": "2021-05-31",
+      "source": "outputs/fill_mixture/selection.json"
+    },
+    "model_id": {
+      "value": "Qwen/Qwen3-Embedding-0.6B",
+      "rendered": "Qwen/Qwen3-Embedding-0.6B",
+      "source": "outputs/report_build/model_plan.json"
+    },
+    "model_revision": {
+      "value": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "rendered": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "source": "outputs/report_build/model_plan.json"
+    },
+    "embedding_dimension": {
+      "value": 1024,
+      "rendered": "1024",
+      "source": "outputs/report_build/model_plan.json"
+    },
+    "timing_repeats": {
+      "value": 5,
+      "rendered": "5",
+      "source": "outputs/report_build/model_plan.json"
+    },
+    "starter_commit": {
+      "value": "51337032503c56e3a28ef646a24aa016782e1bd3",
+      "rendered": "51337032503c56e3a28ef646a24aa016782e1bd3",
+      "source": "Unmodified downloaded course-starter snapshot; session download verification"
+    },
+    "record_customer": {
+      "value": "U001",
+      "rendered": "U001",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_isin": {
+      "value": "GRS003003035",
+      "rendered": "GRS003003035",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_id": {
+      "value": "7438853",
+      "rendered": "7438853",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_type": {
+      "value": "Buy",
+      "rendered": "Buy",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_date": {
+      "value": "2020-01-14",
+      "rendered": "2020-01-14",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_value": {
+      "value": "1152.0",
+      "rendered": "1152.0",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_units": {
+      "value": "400.0",
+      "rendered": "400.0",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_channel": {
+      "value": "Internet Banking",
+      "rendered": "Internet Banking",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_market": {
+      "value": "XATH",
+      "rendered": "XATH",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "record_line": {
+      "value": 83760,
+      "rendered": "83760",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "asset_name": {
+      "value": "NATIONAL BANK OF GREECE",
+      "rendered": "NATIONAL BANK OF GREECE",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "asset_date": {
+      "value": "2018-01-02",
+      "rendered": "2018-01-02",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "asset_category": {
+      "value": "Stock",
+      "rendered": "Stock",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "asset_subcategory": {
+      "value": "Large Cap",
+      "rendered": "Large Cap",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "asset_market": {
+      "value": "XATH",
+      "rendered": "XATH",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "customer_type": {
+      "value": "Mass",
+      "rendered": "Mass",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "customer_risk": {
+      "value": "Income",
+      "rendered": "Income",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "customer_capacity": {
+      "value": "CAP_LT30K",
+      "rendered": "CAP_LT30K",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "profile_date": {
+      "value": "2020-01-14",
+      "rendered": "2020-01-14",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "questionnaire_date": {
+      "value": "2019-07-16",
+      "rendered": "2019-07-16",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "pre_close": {
+      "value": "2.584",
+      "rendered": "2.584",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "pre_close_date": {
+      "value": "2021-05-31",
+      "rendered": "2021-05-31",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "event_close": {
+      "value": "2.88",
+      "rendered": "2.88",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "limit_end": {
+      "value": "2022-11-29",
+      "rendered": "2022-11-29",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "limit_end_price": {
+      "value": "3.76",
+      "rendered": "3.76",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "limit_return": {
+      "value": "0.1604938271604936",
+      "rendered": "0.1604938271604936",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "future_profiles": {
+      "value": 1318,
+      "rendered": "1,318",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "predicted_risk": {
+      "value": 725,
+      "rendered": "725",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "predicted_capacity": {
+      "value": 738,
+      "rendered": "738",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "future_asset_rows": {
+      "value": 47,
+      "rendered": "47",
+      "source": "outputs/data_audit/audit.json"
+    },
+    "case_latest_rank": {
+      "value": 7,
+      "rendered": "7",
+      "source": "outputs/demo_ndcg_nonzero/evidence.json"
+    },
+    "case_latest_logarg": {
+      "value": 8,
+      "rendered": "8",
+      "source": "outputs/demo_ndcg_nonzero/evidence.json (rank + 1)"
+    },
+    "case_latest_score": {
+      "value": 0.3333333333333333,
+      "rendered": "0.3333",
+      "source": "outputs/demo_ndcg_nonzero/evidence.json"
+    },
+    "case_pop_rank": {
+      "value": 2,
+      "rendered": "2",
+      "source": "outputs/demo_ndcg_nonzero/evidence.json"
+    },
+    "case_pop_logarg": {
+      "value": 3,
+      "rendered": "3",
+      "source": "outputs/demo_ndcg_nonzero/evidence.json (rank + 1)"
+    },
+    "case_pop_score": {
+      "value": 0.6309297535714575,
+      "rendered": "0.6309",
+      "source": "outputs/demo_ndcg_nonzero/evidence.json"
+    },
+    "case_idcg": {
+      "value": 1.0,
+      "rendered": "1",
+      "source": "outputs/demo_ndcg_nonzero/evidence.json"
+    },
+    "python_version": {
+      "value": "3.12.2",
+      "rendered": "3.12.2",
+      "source": "outputs/fill_experiment/protocol.json"
+    },
+    "numpy_version": {
+      "value": "1.26.4",
+      "rendered": "1.26.4",
+      "source": "outputs/fill_experiment/protocol.json"
+    },
+    "scipy_version": {
+      "value": "1.13.1",
+      "rendered": "1.13.1",
+      "source": "outputs/fill_experiment/protocol.json"
+    },
+    "sklearn_version": {
+      "value": "1.5.1",
+      "rendered": "1.5.1",
+      "source": "outputs/fill_experiment/protocol.json"
+    },
+    "base_popularity_all": {
+      "value": 0.026172888075933286,
+      "rendered": "0.0262",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "base_popularity_nonempty": {
+      "value": 0.2311568145517911,
+      "rendered": "0.2312",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "base_cbf_all": {
+      "value": 0.02855316923423279,
+      "rendered": "0.0286",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "base_cbf_nonempty": {
+      "value": 0.25217926376312216,
+      "rendered": "0.2522",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "base_latest_buy_all": {
+      "value": 0.05263282198045577,
+      "rendered": "0.0526",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "base_latest_buy_nonempty": {
+      "value": 0.4648487944691526,
+      "rendered": "0.4648",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "base_latest_buy_or_sell_all": {
+      "value": 0.05091088560550385,
+      "rendered": "0.0509",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "base_latest_buy_or_sell_nonempty": {
+      "value": 0.44964079273315966,
+      "rendered": "0.4496",
+      "source": "outputs/baseline_full_warm/metrics.json"
+    },
+    "fill_0_all": {
+      "value": 0.05263282198045577,
+      "rendered": "0.0526",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_0_nonempty": {
+      "value": 0.4648487944691526,
+      "rendered": "0.4648",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_0_new": {
+      "value": 80,
+      "rendered": "80",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_1_all": {
+      "value": 0.05184956436982596,
+      "rendered": "0.0518",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_1_nonempty": {
+      "value": 0.4579311270829111,
+      "rendered": "0.4579",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_1_new": {
+      "value": 57,
+      "rendered": "57",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_2_all": {
+      "value": 0.05209586070422962,
+      "rendered": "0.0521",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_2_nonempty": {
+      "value": 0.46010639623667654,
+      "rendered": "0.4601",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_2_new": {
+      "value": 69,
+      "rendered": "69",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "fill_3_all": {
+      "value": 0.053075028905243564,
+      "rendered": "0.0531",
+      "source": "outputs/fill_mixture/test_june/metrics.json"
+    },
+    "fill_3_nonempty": {
+      "value": 0.4687543299916418,
+      "rendered": "0.4688",
+      "source": "outputs/fill_mixture/test_june/metrics.json"
+    },
+    "fill_3_new": {
+      "value": 98,
+      "rendered": "98",
+      "source": "outputs/fill_mixture/test_june/metrics.json"
+    },
+    "fill_4_all": {
+      "value": 0.052960582728838156,
+      "rendered": "0.0530",
+      "source": "outputs/fill_mixture/test_june/metrics.json"
+    },
+    "fill_4_nonempty": {
+      "value": 0.4677435506883125,
+      "rendered": "0.4677",
+      "source": "outputs/fill_mixture/test_june/metrics.json"
+    },
+    "fill_4_new": {
+      "value": 95,
+      "rendered": "95",
+      "source": "outputs/fill_mixture/test_june/metrics.json"
+    },
+    "random_all": {
+      "value": 0.05018166422946993,
+      "rendered": "0.0502",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "random_nonempty": {
+      "value": 0.443200368967237,
+      "rendered": "0.4432",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "random_new": {
+      "value": 3.4,
+      "rendered": "3.4",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "oracle_nonempty": {
+      "value": 0.5628070501626868,
+      "rendered": "0.5628",
+      "source": "outputs/fill_experiment/metrics.json"
+    },
+    "oracle_new": {
+      "value": 476,
+      "rendered": "476",
+      "source": "outputs/fill_experiment/metrics.json"
+    }
+  },
+  "rerun_file_checks": [
+    {
+      "first": "outputs/baseline_default/predictions.csv",
+      "repeat": "outputs/baseline_default_repeat/predictions.csv",
+      "identical": true,
+      "sha256": "e556792baafe109db154bd1e89cbc7ea7a9f113f24d4d0690584f77393bf4014"
+    },
+    {
+      "first": "outputs/baseline_default/metrics.json",
+      "repeat": "outputs/baseline_default_repeat/metrics.json",
+      "identical": true,
+      "sha256": "00b3e21d12bb3c99c3baffdaa2a252c94695d837aaa3b51dc34e86f50911213f"
+    },
+    {
+      "first": "outputs/baseline_default/protocol.json",
+      "repeat": "outputs/baseline_default_repeat/protocol.json",
+      "identical": true,
+      "sha256": "df787347c013740822aeaa2ea17688e975fe46f608f14aea53235ac76fe58f99"
+    },
+    {
+      "first": "outputs/baseline_default/per_user.csv",
+      "repeat": "outputs/baseline_default_repeat/per_user.csv",
+      "identical": true,
+      "sha256": "e7170d42843d3b35bc98284aad0f184f6d5e465e62b3484242f61fad147adee1"
+    },
+    {
+      "first": "outputs/baseline_default/contexts.jsonl",
+      "repeat": "outputs/baseline_default_repeat/contexts.jsonl",
+      "identical": true,
+      "sha256": "a505745968316fb96f03a453726878d84501965a12482e81b54b8bf468a1093e"
+    },
+    {
+      "first": "outputs/baseline_full_warm/predictions.csv",
+      "repeat": "outputs/baseline_full_warm_repeat/predictions.csv",
+      "identical": true,
+      "sha256": "5479d3723c55a600a676d05a1b5c55380d1261418547c8550132a0a5648810c3"
+    },
+    {
+      "first": "outputs/baseline_full_warm/metrics.json",
+      "repeat": "outputs/baseline_full_warm_repeat/metrics.json",
+      "identical": true,
+      "sha256": "f495e8ed4dd61e3655e1adebd6a29a431cbab6cab006c14cfb28048923df8bc7"
+    },
+    {
+      "first": "outputs/baseline_full_warm/protocol.json",
+      "repeat": "outputs/baseline_full_warm_repeat/protocol.json",
+      "identical": true,
+      "sha256": "2401a84c99f90128570c6f41dbdb8a47fddc421b4b29bc9409a878fa8d8d8bb3"
+    },
+    {
+      "first": "outputs/baseline_full_warm/per_user.csv",
+      "repeat": "outputs/baseline_full_warm_repeat/per_user.csv",
+      "identical": true,
+      "sha256": "0627ebf0ae948a076e8ec0e8b768d5ddbdf382f4c54bfe43dbde45701b6a99ee"
+    },
+    {
+      "first": "outputs/baseline_full_warm/contexts.jsonl",
+      "repeat": "outputs/baseline_full_warm_repeat/contexts.jsonl",
+      "identical": true,
+      "sha256": "2a4cdf6c4809f687fc4ac937b875e6af488368de08a4582084c638db8dbb3b2a"
+    }
+  ],
+  "layout": [
+    {
+      "page": 1,
+      "text_spans": 58,
+      "horizontal_overflow": false
+    },
+    {
+      "page": 2,
+      "text_spans": 117,
+      "horizontal_overflow": false
+    },
+    {
+      "page": 3,
+      "text_spans": 96,
+      "horizontal_overflow": false
+    },
+    {
+      "page": 4,
+      "text_spans": 115,
+      "horizontal_overflow": false
+    },
+    {
+      "page": 5,
+      "text_spans": 62,
+      "horizontal_overflow": false
+    },
+    {
+      "page": 6,
+      "text_spans": 66,
+      "horizontal_overflow": false
+    }
+  ],
+  "reportlab_version": "5.1.0",
+  "pdf_sha256": "ffec9f1e6df14d0c2c9866a74dccd6c14f744fb7141fe8012b652d5ce5c9352c"
+}

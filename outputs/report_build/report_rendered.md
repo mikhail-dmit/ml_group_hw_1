@@ -1,0 +1,194 @@
+# Frozen Asset-Text Embeddings for Repeat-Preserving Financial Recommendation
+
+**Mikhail Dmitrenko** · Team **HuggyWuggy**
+
+midmitrenko@edu.hse.ru · **2026-11-13**
+
+LLM4Rec, HSE University · Session 1: Research Question and Minimal Study Plan · **Encoder track**
+
+## Abstract
+
+Repeat purchases are important in financial recommendation, so replacing a strong history-based ranking can obscure the value of semantic item representations. This study proposes to retain Latest buy's historical prefix and replace only the free-slot TF-IDF representation with frozen Qwen3 asset-text embeddings, holding information and scoring rules fixed. Completed classical experiments on 10,404 warm users give nDCG@10 of 0.0530 for popularity-plus-TF-IDF fill versus 0.0526 for original Latest buy, while the constrained oracle reaches 0.0637. The LLM comparison remains planned: the contribution is a controlled test of incremental representation value, not a claim of improved investment quality.
+
+## 1. Introduction
+
+FAR-Trans contains purchases, sales and asset information for financial recommendation [1], [6]. Under the course project's repeat-allowed task, a model should predict future purchases of either previously bought or new-to-user assets. This differs from the paper's new-asset-only evaluation. A semantic encoder may improve discovery, but it should be tested without changing a useful repeat-purchase mechanism.
+
+> **Research question.** We test whether frozen LLM-derived asset-text embeddings improve mean nDCG@10 over popularity-plus-TF-IDF filling for FAR-Trans users in the course starter's full warm cohort, while keeping Latest buy's historical prefix unchanged.
+
+| Element | Definition for this study |
+|---|---|
+| Intervention | Replace TF-IDF item vectors with frozen Qwen3-Embedding-0.6B vectors only. |
+| Control | Popularity-plus-TF-IDF fill using the same pre-cutoff asset names and metadata. |
+| Outcome | Mean nDCG@10 against future eligible purchases over all selected users, including empty truth. |
+| Population | Current teaching cohort: 10,404 warm users; cutoff 2021-06-01; June purchase window. |
+| Track and state | **Encoder; partly run.** Classical diagnostics are complete; LLM inference and its main comparison are planned. |
+
+**Research importance.** Repeat/explore modeling [2] and text-based item representations [3] are established, but frozen content features can underperform learned ID representations [5]. The new knowledge sought is whether a frozen semantic encoder adds ranking value specifically in free slots after a fixed recency prefix and a strong popularity term. A negative or null result would bound the usefulness of this low-training-cost design.
+
+**Business value.** A recommendation product owner must decide whether to retain a cheap classical fill or pay the preparation, memory and maintenance costs of cached neural embeddings. A same-information comparison can support that decision even if the LLM does not improve ranking. Neither nDCG nor this offline study establishes profitability, suitability, causal business effects or user acceptance [1].
+
+**Scope.** The team has agreed to use the course starter as its common working protocol [8]. Its dates, cohort and eligibility settings are teaching choices, not a declaration of the final instructor-defined project benchmark. The output remains one Top-10 list per evaluated user.
+
+<!-- PAGEBREAK -->
+
+## 2. Related Work
+
+The following primary studies were opened in full text by the AI assistant; method, experimental and limitation sections were inspected. Author order and publication details were checked against DOI records or the workshop/university record. Student-side verification remains to be completed in Section 6.
+
+| Study | Method | Data and evaluation | Limitation and connection |
+|---|---|---|---|
+| **[1] Sanz-Cruzado, Droukas and McCreadie (2024), Fin-RecSys / IJCAI workshop** | FAR-Trans release; transaction, price-regression and hybrid recommenders. | Financial transactions and prices; rolling temporal evaluation; nDCG@10 and ROI@10. | Excludes past purchases and requires active test users. Supplies our domain, but does not evaluate repeat-allowed fixed-prefix fills or text embeddings. |
+| **[2] Ren et al. (2019), AAAI: RepeatNet** | GRU encoder, learned repeat/explore gate and separate decoders. | YOOCHOOSE, DIGINETICA, LASTFM; Recall and MRR at ranking cutoffs. | Session-level repeats differ from investment history. Learned repeat bias can harm exploration; motivates separating repeat and new-item effects. |
+| **[3] Hou et al. (2022), KDD: UniSRec** | Precomputed BERT features, whitening/MoE adapter and contrastive sequence learning; text-only and text-plus-ID variants. | Amazon categories and Online Retail; full-item leave-one-out; Recall and nDCG. | Adapters and sequence components are trained. Transfer and long-tail evidence does not prove frozen cosine features help our fill-only setting. |
+| **[4] Spadea and Seneviratne (2025), ICAIF: FLARKO** | Generative Qwen3 models, personal/market knowledge graphs and KTO/LoRA finetuning; centralized/federated variants. | FAR-Trans; 180-day outcomes; Hits@3 variants: Pref@3, Prof@3 and Comb@3. | Closest financial-domain LLM prior. Different inputs, training and objective; no frozen asset-vector swap, fixed recency prefix or nDCG@10 fill comparison. |
+| **[5] Yuan et al. (2023), SIGIR: ID vs. modality representations** | Matched recommendation backbones compare IDs, frozen content features and end-to-end encoders. | MIND, H&M and Bili; full-pool HR@10 and nDCG@10; warm/cold-item and cost analyses. | Frozen features can be weaker than IDs or trained encoders; conclusions depend on domain/backbone. Closest controlled-encoder precedent, without financial fixed-prefix fills. |
+
+**Nearest prior work.** FLARKO [4] is the closest financial-domain LLM study: it already evaluates KG-grounded, KTO-finetuned recommendations on FAR-Trans using purchase/profitability hit metrics. Yuan et al. [5] remain the closest methodological precedent for matched encoder comparisons and frozen versus end-to-end learning. UniSRec [3] provides modular text features with learned adaptation; RepeatNet [2] motivates repeat/explore separation.
+
+**Gap.** FLARKO already studies KTO-finetuned LLM recommendations on FAR-Trans using knowledge-graph context and 180-day Hits@3 objectives [4]. Among the studies reviewed, we did not find a same-information comparison of frozen language-model asset-text embeddings against popularity-plus-TF-IDF filling that holds a recency-based historical prefix fixed and evaluates 30-day, repeat-allowed purchases with all-user mean nDCG@10. This is a bounded literature finding, not a global novelty claim.
+
+**Terminology.** An asset new to one user's retained history can still be popular across other users. This is not the same as an item absent from all training interactions, the stronger cold/new-item condition considered in [5]. Moreover, reconstructed initial positions are excluded by the starter, so “new-to-user” here does not establish first-ever ownership. The present warm-user cohort is not a warm-item-only benchmark.
+
+**Evidence for these summaries.** Section and table pointers, qualifications, checked links and complete author lists are retained in `literature/reading_notes.md`, `literature/link_checks.json` and `literature/references.bib`. The reviewed representation models should not all be described as prompted generative LLMs.
+
+<!-- PAGEBREAK -->
+
+## 3. Method
+
+### 3.1. Data, protocol and one actual record
+
+At cutoff **2021-06-01**, the starter selects the latest asset/customer rows strictly before prediction time, and assets with at least one positive pre-cutoff close price [8]. The full warm cohort contains **10,404 users and 767 eligible assets**, including stocks, funds and bonds under the data-driven rules. Users have retained historical Buy activity and an as-of profile. The label window is **[2021-06-01, 2021-07-01)**. Repeat purchases remain eligible; negative-ID initial positions and exact duplicate rows are excluded. The demo sample uses deterministic ID hashing; this report's main experiments use the full warm cohort.
+
+The following is one real record from the public release [6]; only the customer identifier is replaced by a report-local alias. All other values are verbatim. Its ID is nonnegative and its event precedes both validation and test cutoffs.
+
+```text
+source: FAR-Trans.zip / transactions.csv; source line 83760
+record id: 7438853
+fields: customerID, ISIN, transactionID, transactionType, timestamp,
+        totalValue, units, channel, marketID
+values: U001, GRS003003035, 7438853, Buy, 2020-01-14,
+        1152.0, 400.0, Internet Banking, XATH
+window: history before 2021-06-01
+```
+
+| Fields / example values | Status and recorded time | Use |
+|---|---|---|
+| Transaction IDs, ISIN, Buy and date, as above | Observed released attributes at 2020-01-14; customer alias assigned for display | Grouping, eligibility/exclusion checks and history/recency |
+| `assetName`: NATIONAL BANK OF GREECE | Observed metadata; row 2018-01-02 | TF-IDF and planned embedding input |
+| Category / subcategory / market: Stock / Large Cap / XATH | Observed metadata; row 2018-01-02 | Both content representations |
+| `sector`, `industry`: empty strings | **Missing** at metadata row 2018-01-02 | Omitted; no future imputation |
+| Customer: Mass, Income, CAP_LT30K | Observed labels; row 2020-01-14; questionnaire 2019-07-16 | Audit/context only; not scoring inputs |
+| `totalValue` 1152.0; `units` 400.0 | Value estimated/derived; quantity can be split-adjusted; released date 2020-01-14 | Displayed only; not scorer inputs |
+| Close price 2.584 | Observed released price, 2021-05-31 | Positive-price eligibility, not return prediction |
+
+“Observed” refers to the released attribute, not proof of an unmodified raw observation. The paper documents adjusted units/dates, retrospective price processing and value estimation [1, Sec. 3]. For the example, 400.0 × 2.88 = 1152.0. Original per-field publication/adjustment times are not supplied. Counts, popularity, vectors and similarities are derived only from retained pre-cutoff inputs.
+
+### 3.2. Leakage checks and field restrictions
+
+**Customer information:** 1,318 selected pre-cutoff profiles contain a questionnaire date at or after the June cutoff; row timestamps alone cannot certify field availability. `Predicted_*` means estimated, not observed ground truth; there are 725 such risk labels and 738 capacity labels in this cohort. Profile attributes are excluded from both encoders. Cohort membership follows the starter's convention, with placeholder-date uncertainty documented.
+
+**Asset information:** no selected asset metadata row is dated at/after the cutoff; 47 future-dated raw rows are not used. Missing names/fields are not backfilled from later records. Recorded dates pass the as-of check, but field-level historical versioning remains a limitation.
+
+**Limit prices:** the example's `maxDate` is 2022-11-29, its endpoint price is 3.76, and its realized profitability is 0.1604938271604936. These are future-derived at the prediction cutoff; min/max refer to series endpoints, not price extrema. The entire file is excluded. Eligibility uses pre-cutoff `close_prices.csv` instead. Source: `outputs/data_audit/audit.json`.
+
+<!-- PAGEBREAK -->
+
+### 3.3. Controlled encoder comparison — planned
+
+Freeze Latest buy's prefix: up to ten historical assets ordered by last Buy date (ties by ISIN). Fill candidates are all eligible assets outside it. Both encoders receive identical as-of names, category, subcategory, sector, industry and market, omitting missing fields. Profiles, future transactions and returns are excluded.
+
+**Control:** TF-IDF name unigrams and field-qualified tokens. **Intervention:** frozen **Qwen/Qwen3-Embedding-0.6B** [7], revision `97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3`; 1024-dimensional normalized vectors, last-token pooling, no instructions or finetuning. Both use the same normalized purchase-count-weighted history sum and free-slot score:
+
+> **s(u,i) = distinct_buyers(i) / max_j distinct_buyers(j) + lambda × cosine(v_u, v_i)**
+
+**Lambda = 1 for both** in the primary swap; no June tuning. **Ablations:** TF-IDF substitutes the representation using the same information; lambda = 0 removes similarity and recovers original Latest buy. All supplied baselines are retained; the diagnostic oracle never supplies inputs.
+
+**Metric:** binary nDCG@10 uses eligible June purchases. DCG sums `rel_r / log2(r+1)`; IDCG places up to ten relevant assets first. Empty truth scores zero. Report all-user and nonempty means/counts, plus repeat/new hits. Ground truth is purchases, not an LLM judge.
+
+**Runtime/cost:** time cold generation (loading, representation preparation, scoring/Top-10), excluding evaluation; separate preparation and cached generation. Use 5 repeats on identical hardware, report median/range, dependencies, precision, batch size and peak memory. Local inference needs no paid API; log compute hours and actual rental charges. **Next sessions:** implement/cache embeddings and controls, then ablate, analyse failures and integrate under the final protocol. Frozen inference avoids sampling; diagnostic random fills use saved seeds.
+
+## 4. Experiments — completed classical work
+
+**All supplied baselines, full warm cohort.** All-user means include 9,226 empty-truth users; the nonempty column uses 1,178 users. Values are shown to four decimals.
+
+| Method | Users | Nonempty | nDCG: all | nDCG: nonempty |
+|---|---:|---:|---:|---:|
+| Popularity | 10,404 | 1,178 | 0.0262 | 0.2312 |
+| CBF | 10,404 | 1,178 | 0.0286 | 0.2522 |
+| Latest buy | 10,404 | 1,178 | 0.0526 | 0.4648 |
+| Latest buy or sell | 10,404 | 1,178 | 0.0509 | 0.4496 |
+
+Source: `outputs/baseline_full_warm/metrics.json`. Both cohort reruns were byte-identical across saved predictions, protocol, metrics and contexts; hashes are saved with this build.
+
+**Fixed-prefix fills, same June users.** May validation: [2021-05-01, 2021-05-31), 10,178 warm / 1,627 nonempty users. Both selected lambda = 1 from the saved grid, then each was evaluated once on June.
+
+| Fill / fixed-history method | nDCG: all | nDCG: nonempty | New hits |
+|---|---:|---:|---:|
+| Popularity fill (= Latest buy) | 0.0526 | 0.4648 | 80 |
+| CBF similarity only | 0.0518 | 0.4579 | 57 |
+| TF-IDF similarity only | 0.0521 | 0.4601 | 69 |
+| Popularity + CBF, lambda = 1 | 0.0531 | 0.4688 | 98 |
+| Popularity + TF-IDF, lambda = 1 | 0.0530 | 0.4677 | 95 |
+| Random fill (seed mean) | 0.0502 | 0.4432 | 3.4 mean |
+| Perfect fill (oracle; diagnostic) | 0.0637 | 0.5628 | 476 |
+
+Sources: `outputs/fill_experiment/metrics.json` and `outputs/fill_mixture/`. Random: 30-seed mean, all-user SD 0.000046; all fills retain 1,298 repeat hits. **LLM inference/timing: not run.**
+
+<!-- PAGEBREAK -->
+
+## 5. Discussion
+
+**Position and interpretation.** I adopt fixed-prefix filling to isolate an Encoder change while protecting repeat recommendations. The data contain 1,548 repeat and 1,008 new future user–asset pairs (60.6% repeats). There are 9,553 users with free slots, 726 with future purchases. Pure similarity fill loses to popularity; mixtures improve slightly. The oracle ceiling is 0.0637, not a promised neural gain. Positive findings would support cached semantic features for this branch; negative/null findings would support classical fills.
+
+**Threats and failure mechanisms.** June informed exploratory design and is not a pristine holdout; freeze settings before the LLM comparison and assess generalization under the final protocol. Empty truth dominates, full prefixes prevent intervention for some users, and short/multilingual names may provide weak semantics. The checkpoint postdates prediction time, leaving pretraining-contamination risk. Keep pseudonymized customer data local and treat text as data, not instructions. Ranking accuracy does not establish suitability or profit.
+
+**Automated metric check, not yet personal verification.** One demo user's single relevant asset is at popularity rank 2 and Latest buy's first fill rank 7. IDCG = 1; rounded scores `1/log2(8)` → 0.3333 and `1/log2(3)` → 0.6309 match `per_user.csv`. Its excluded initial position means novelty is relative to retained history. Evidence: `outputs/demo_ndcg_nonzero/evidence.json`.
+
+### Team Discussion — pending
+
+No team discussion meeting has taken place yet. The previously agreed team name, Encoder role and use of the course starter are the current shared context.
+
+> **[TO COMPLETE AFTER THE TEAM MEETING]**
+> Options considered: questions, methods, baselines, data slices and rejected options.
+> Agreement and unresolved differences: record the actual discussion.
+> My contribution versus joint work: identify proposals/checks and shared ideas.
+> My position and reasons: complete in my own words after the meeting.
+
+## 6. AI Usage Disclosure
+
+**Tools and scope.** OpenCode with OpenAI **gpt-6.1-sol** (`openai/gpt-6.1-sol`); harness version unrecorded. AI retrieved/synthesized sources, inspected the starter, generated/executed analyses, checked outputs, and drafted/rendered this report. Recorded analysis versions: Python 3.12.2, NumPy 1.26.4, SciPy 1.13.1, scikit-learn 1.5.1. Qwen inference remains planned.
+
+**Direction and attribution.** I selected fixed-prefix Encoder work and requested reproducibility, repeat/new, classical-fill, earlier-window, provenance and literature checks. The assistant implemented and ran the analyses; these are not claimed as my personal verification.
+
+### What I personally verified
+
+> **[TO BE COMPLETED BY MIKHAIL]**
+> Exact output/source, independent procedure or calculation, and outcome.
+
+### Trusted without verification
+
+> **[TO BE COMPLETED BY MIKHAIL]**
+> AI-generated claims, code or summaries accepted without independent checking.
+
+**Session export to attach:** `dmitrenko_mikhail_session1_session.json` (native JSONL accepted). Attachment is pending; reconcile this disclosure with the actual native log before submission.
+
+<!-- PAGEBREAK -->
+
+## References
+
+[1] J. Sanz-Cruzado, N. Droukas, and R. McCreadie, “FAR-Trans: An Investment Dataset for Financial Asset Recommendation,” in *IJCAI-24 Workshop on Recommender Systems in Finance (Fin-RecSys)*, Jeju, Republic of Korea, 2024. [Online]. Available: https://arxiv.org/html/2407.08692. Publication verified at https://eprints.gla.ac.uk/328250/. Accessed: Nov. 13, 2026.
+
+[2] P. Ren, Z. Chen, J. Li, Z. Ren, J. Ma, and M. de Rijke, “RepeatNet: A Repeat Aware Neural Recommendation Machine for Session-Based Recommendation,” *Proceedings of the AAAI Conference on Artificial Intelligence*, vol. 33, no. 1, pp. 4806–4813, 2019, doi: 10.1609/aaai.v33i01.33014806. [Online]. Available: https://arxiv.org/html/1812.02646v1. Accessed: Nov. 13, 2026.
+
+[3] Y. Hou, S. Mu, W. X. Zhao, Y. Li, B. Ding, and J.-R. Wen, “Towards Universal Sequence Representation Learning for Recommender Systems,” in *Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, pp. 585–593, 2022, doi: 10.1145/3534678.3539381. [Online]. Available: https://arxiv.org/html/2206.05941v1. Accessed: Nov. 13, 2026.
+
+[4] F. Spadea and O. Seneviratne, “Aligning Language Models with Investor and Market Behavior for Financial Recommendations,” in *Proceedings of the 6th ACM International Conference on AI in Finance (ICAIF '25)*, pp. 509–517, 2025, doi: 10.1145/3768292.3770399. [Online]. Available: https://arxiv.org/html/2510.15993. Accessed: Nov. 13, 2026.
+
+[5] Z. Yuan, F. Yuan, Y. Song, Y. Li, J. Fu, F. Yang, Y. Pan, and Y. Ni, “Where to Go Next for Recommender Systems? ID- vs. Modality-based Recommender Models Revisited,” in *Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval*, pp. 2639–2649, 2023, doi: 10.1145/3539618.3591932. [Online]. Available: https://arxiv.org/html/2303.13835. Accessed: Nov. 13, 2026.
+
+[6] University of Glasgow, “FAR-Trans: An Investment Dataset for Financial Asset Recommendation,” public data collection, 2024, doi: 10.5525/gla.researchdata.1658. [Online]. Available: https://researchdata.gla.ac.uk/1658/. Data definitions: https://researchdata.gla.ac.uk/1658/2/README.txt. Accessed: Nov. 13, 2026.
+
+[7] Qwen, “Qwen3-Embedding-0.6B,” model card and open weights, Apache-2.0; revision 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3. [Online]. Available: https://huggingface.co/Qwen/Qwen3-Embedding-0.6B. Model/version metadata: https://huggingface.co/api/models/Qwen/Qwen3-Embedding-0.6B. Accessed: Nov. 13, 2026.
+
+[8] S. Jin (dryjins), “FAR-Trans student starter and Homework 2 instructions,” *RecSys-LLMs* course repository, commit 51337032503c56e3a28ef646a24aa016782e1bd3. [Online]. Available: https://github.com/dryjins/RecSys-LLMs/tree/51337032503c56e3a28ef646a24aa016782e1bd3/project/far-trans. Accessed: Nov. 13, 2026.

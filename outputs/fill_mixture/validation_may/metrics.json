@@ -1,0 +1,246 @@
+{
+  "counts": {
+    "users": 10178,
+    "nonempty_truth_users": 1627,
+    "users_with_free_slots": 9373
+  },
+  "methods": {
+    "popularity_fill": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09073907057887441,
+      "ndcg_at_10_nonempty": 0.5676350708984534,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 240
+      }
+    },
+    "cbf_lambda_0": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09073907057887441,
+      "ndcg_at_10_nonempty": 0.5676350708984534,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 240
+      }
+    },
+    "cbf_lambda_0.01": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09073907057887441,
+      "ndcg_at_10_nonempty": 0.5676350708984534,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 240
+      }
+    },
+    "cbf_lambda_0.03": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09079436514142714,
+      "ndcg_at_10_nonempty": 0.5679809762811588,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 240
+      }
+    },
+    "cbf_lambda_0.1": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09100187484809695,
+      "ndcg_at_10_nonempty": 0.569279091704936,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 241
+      }
+    },
+    "cbf_lambda_0.3": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09102960596743076,
+      "ndcg_at_10_nonempty": 0.5694525688607931,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 242
+      }
+    },
+    "cbf_lambda_1": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09115134315527343,
+      "ndcg_at_10_nonempty": 0.5702141183985082,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 250
+      }
+    },
+    "cbf_lambda_3": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09052819332745204,
+      "ndcg_at_10_nonempty": 0.5663158891744358,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 231
+      }
+    },
+    "cbf_lambda_10": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.08909112116289139,
+      "ndcg_at_10_nonempty": 0.5573260179446272,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 184
+      }
+    },
+    "cbf_lambda_30": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.08802275471794208,
+      "ndcg_at_10_nonempty": 0.5506426536688472,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 150
+      }
+    },
+    "cbf_lambda_100": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.08797385625691566,
+      "ndcg_at_10_nonempty": 0.5503367602845037,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 148
+      }
+    },
+    "tfidf_lambda_0": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09073907057887441,
+      "ndcg_at_10_nonempty": 0.5676350708984534,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 240
+      }
+    },
+    "tfidf_lambda_0.01": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09073907057887441,
+      "ndcg_at_10_nonempty": 0.5676350708984534,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 240
+      }
+    },
+    "tfidf_lambda_0.03": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09072165661868732,
+      "ndcg_at_10_nonempty": 0.5675261346435154,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 239
+      }
+    },
+    "tfidf_lambda_0.1": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09089007246414274,
+      "ndcg_at_10_nonempty": 0.5685796911739673,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 240
+      }
+    },
+    "tfidf_lambda_0.3": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09100990702529413,
+      "ndcg_at_10_nonempty": 0.5693293384778387,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 242
+      }
+    },
+    "tfidf_lambda_1": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.0911228603323309,
+      "ndcg_at_10_nonempty": 0.5700359388214283,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 246
+      }
+    },
+    "tfidf_lambda_3": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.09027043754255194,
+      "ndcg_at_10_nonempty": 0.5647034500971688,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 230
+      }
+    },
+    "tfidf_lambda_10": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.08865875114533389,
+      "ndcg_at_10_nonempty": 0.554621247177141,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 180
+      }
+    },
+    "tfidf_lambda_30": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.08789186959303966,
+      "ndcg_at_10_nonempty": 0.549823877515647,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 148
+      }
+    },
+    "tfidf_lambda_100": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "empty_truth_users": 8551,
+      "ndcg_at_10": 0.08788183148847548,
+      "ndcg_at_10_nonempty": 0.5497610822923807,
+      "relevant_pairs_retrieved": {
+        "repeat": 2047,
+        "new": 149
+      }
+    }
+  },
+  "verification": {
+    "all_prefixes_frozen": true,
+    "all_rankings_valid": true,
+    "all_repeat_hits_unchanged": true,
+    "popularity_reproduces_saved_june_latest_buy": false
+  }
+}

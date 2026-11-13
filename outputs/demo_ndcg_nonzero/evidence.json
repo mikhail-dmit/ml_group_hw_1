@@ -1,0 +1,291 @@
+{
+  "user_id": "D63DFAE7E53493A5ADD5",
+  "demo_position_one_based": 56,
+  "protocol_hash": "50efd4aeb415ba6f0c66dd0793a7c2033cdc32a42b86b58eebbca3e81eaf3417",
+  "distinct_history_assets": 6,
+  "new_truth_assets": 1,
+  "new_truth_assets_even_including_initial_positions": 0,
+  "repeat_truth_assets": 0,
+  "future_buy_rows": [
+    {
+      "transactionID": "9059812",
+      "ISIN": "GRS015003007",
+      "timestamp": "2021-06-09",
+      "source_line": 144647,
+      "assetName": "ALPHA SERVICES AND HOLDINGS S.A.",
+      "repeat_or_new": "new",
+      "retained_pre_cutoff_buy_count": 0,
+      "last_pre_cutoff_buy": null
+    }
+  ],
+  "truth": [
+    "GRS015003007"
+  ],
+  "idcg_terms": [
+    1.0
+  ],
+  "excluded_initial_positions_for_truth_assets": [
+    {
+      "ISIN": "GRS015003007",
+      "transactionID": "-13769",
+      "timestamp": "2018-01-02",
+      "source_line": 144646
+    }
+  ],
+  "history_prefix": [
+    {
+      "ISIN": "GRS003003035",
+      "last_buy": "2021-05-24",
+      "buy_count": 3
+    },
+    {
+      "ISIN": "GRF000011004",
+      "last_buy": "2021-04-01",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRC4261213D5",
+      "last_buy": "2021-03-19",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRS393503008",
+      "last_buy": "2021-03-19",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRS470003013",
+      "last_buy": "2021-03-19",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRS495003006",
+      "last_buy": "2021-03-19",
+      "buy_count": 1
+    }
+  ],
+  "predictions": {
+    "latest_buy": [
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "1",
+        "ISIN": "GRS003003035",
+        "source_line": 2222,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "2",
+        "ISIN": "GRF000011004",
+        "source_line": 2223,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "3",
+        "ISIN": "GRC4261213D5",
+        "source_line": 2224,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "4",
+        "ISIN": "GRS393503008",
+        "source_line": 2225,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "5",
+        "ISIN": "GRS470003013",
+        "source_line": 2226,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "6",
+        "ISIN": "GRS495003006",
+        "source_line": 2227,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "7",
+        "ISIN": "GRS015003007",
+        "source_line": 2228,
+        "relevant": true
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "8",
+        "ISIN": "GRS014003032",
+        "source_line": 2229,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "9",
+        "ISIN": "GRS323003012",
+        "source_line": 2230,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "10",
+        "ISIN": "GRS434003000",
+        "source_line": 2231,
+        "relevant": false
+      }
+    ],
+    "popularity": [
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "1",
+        "ISIN": "GRS003003035",
+        "source_line": 2202,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "2",
+        "ISIN": "GRS015003007",
+        "source_line": 2203,
+        "relevant": true
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "3",
+        "ISIN": "GRS014003032",
+        "source_line": 2204,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "4",
+        "ISIN": "GRC4261213D5",
+        "source_line": 2205,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "5",
+        "ISIN": "GRS323003012",
+        "source_line": 2206,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "6",
+        "ISIN": "GRS434003000",
+        "source_line": 2207,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "7",
+        "ISIN": "GRS393503008",
+        "source_line": 2208,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "8",
+        "ISIN": "GRS419003009",
+        "source_line": 2209,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "9",
+        "ISIN": "GRS426003000",
+        "source_line": 2210,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "rank": "10",
+        "ISIN": "GRS191213008",
+        "source_line": 2211,
+        "relevant": false
+      }
+    ]
+  },
+  "calculations": {
+    "latest_buy": {
+      "hit_ranks": [
+        7
+      ],
+      "dcg_terms": [
+        0.3333333333333333
+      ],
+      "dcg": 0.3333333333333333,
+      "idcg": 1.0,
+      "ndcg": 0.3333333333333333,
+      "saved_ndcg": 0.3333333333333333,
+      "absolute_difference": 0.0,
+      "per_user_csv_row": {
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "method": "latest_buy",
+        "relevant_count": "1",
+        "ndcg_at_10": "0.3333333333333333",
+        "source_line": 224
+      }
+    },
+    "popularity": {
+      "hit_ranks": [
+        2
+      ],
+      "dcg_terms": [
+        0.6309297535714575
+      ],
+      "dcg": 0.6309297535714575,
+      "idcg": 1.0,
+      "ndcg": 0.6309297535714575,
+      "saved_ndcg": 0.6309297535714575,
+      "absolute_difference": 0.0,
+      "per_user_csv_row": {
+        "user_id": "D63DFAE7E53493A5ADD5",
+        "method": "popularity",
+        "relevant_count": "1",
+        "ndcg_at_10": "0.6309297535714575",
+        "source_line": 222
+      }
+    }
+  },
+  "all_demo_new_hit_pair_counts": {
+    "latest_buy": {
+      "absent_from_retained_history": 1,
+      "absent_even_from_initial_positions": 0
+    },
+    "popularity": {
+      "absent_from_retained_history": 1,
+      "absent_even_from_initial_positions": 0
+    }
+  },
+  "verification": {
+    "at_least_one_future_asset_has_no_retained_pre_cutoff_buys": true,
+    "at_least_one_future_asset_absent_even_from_initial_positions": false,
+    "latest_buy_top10_reconstructed_from_history_and_popularity": true,
+    "independent_calculations_match_saved_per_user": true
+  }
+}

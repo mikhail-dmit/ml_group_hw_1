@@ -1,0 +1,48 @@
+{
+  "counts": {
+    "users": 10404,
+    "nonempty_truth_users": 1178,
+    "users_with_free_slots": 9553
+  },
+  "methods": {
+    "popularity_fill": {
+      "users": 10404,
+      "nonempty_truth_users": 1178,
+      "empty_truth_users": 9226,
+      "ndcg_at_10": 0.05263282198045577,
+      "ndcg_at_10_nonempty": 0.4648487944691526,
+      "relevant_pairs_retrieved": {
+        "repeat": 1298,
+        "new": 80
+      }
+    },
+    "cbf_mixture": {
+      "users": 10404,
+      "nonempty_truth_users": 1178,
+      "empty_truth_users": 9226,
+      "ndcg_at_10": 0.053075028905243564,
+      "ndcg_at_10_nonempty": 0.4687543299916418,
+      "relevant_pairs_retrieved": {
+        "repeat": 1298,
+        "new": 98
+      }
+    },
+    "tfidf_mixture": {
+      "users": 10404,
+      "nonempty_truth_users": 1178,
+      "empty_truth_users": 9226,
+      "ndcg_at_10": 0.052960582728838156,
+      "ndcg_at_10_nonempty": 0.4677435506883125,
+      "relevant_pairs_retrieved": {
+        "repeat": 1298,
+        "new": 95
+      }
+    }
+  },
+  "verification": {
+    "all_prefixes_frozen": true,
+    "all_rankings_valid": true,
+    "all_repeat_hits_unchanged": true,
+    "popularity_reproduces_saved_june_latest_buy": true
+  }
+}

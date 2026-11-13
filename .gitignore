@@ -1,0 +1,9 @@
+FAR-Trans/
+**/contexts.jsonl
+LLM4Recsys 07*.pdf
+homework_guidelines.pdf
+sample_homework.pdf
+Shinshinova_Olga_*.pdf
+yulia_filatkina_*.pdf
+.DS_Store
+__pycache__/

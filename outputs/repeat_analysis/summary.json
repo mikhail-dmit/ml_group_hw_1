@@ -1,0 +1,258 @@
+{
+  "protocol_hash": "8645343ad810615aed56c65afaff9bf7d0ab4638fbd8005b4d6738b27016ab80",
+  "cutoff": "2021-06-01",
+  "end_exclusive": "2021-07-01",
+  "users": 10404,
+  "eligible_assets": 767,
+  "repeat_definition": "Retained eligible Buy before cutoff; not within-window repetition",
+  "future_buy_transaction_rows": {
+    "new": 1227,
+    "repeat": 2266
+  },
+  "future_distinct_user_asset_pairs": {
+    "repeat": 1548,
+    "new": 1008
+  },
+  "percentages": {
+    "repeat_transactions": 64.87260234755225,
+    "repeat_truth_pairs": 60.563380281690144,
+    "latest_buy_repeat_recall": 83.85012919896641,
+    "latest_buy_new_recall": 7.936507936507937,
+    "latest_buy_ndcg_credit_from_repeats": 95.19454221626798,
+    "cbf_top50_repeat_coverage": 46.12403100775194,
+    "cbf_top50_new_coverage": 12.59920634920635
+  },
+  "user_groups": {
+    "empty": 9226,
+    "repeat_only": 581,
+    "new_only": 344,
+    "mixed": 253
+  },
+  "latest_buy_composition": {
+    "history_slots": 31969,
+    "popularity_fill_slots": 72071,
+    "users_needing_fill": 9553,
+    "users_with_one_history_asset": 4491,
+    "users_with_one_feature_type": 4755,
+    "active_history_slots": 7664,
+    "active_popularity_fill_slots": 4116,
+    "active_users_needing_fill": 726,
+    "active_users_with_one_history_asset": 123,
+    "active_users_with_one_feature_type": 131
+  },
+  "history_size_buckets": {
+    "2-5": {
+      "users": 4138,
+      "active_users": 370,
+      "repeat_truth_pairs": 286,
+      "new_truth_pairs": 231,
+      "nonempty_mean_ndcg": {
+        "popularity": 0.3036172982351234,
+        "cbf": 0.36860602600861847,
+        "latest_buy": 0.5087013689609332,
+        "latest_buy_or_sell": 0.5007829333634334
+      }
+    },
+    "1": {
+      "users": 4491,
+      "active_users": 123,
+      "repeat_truth_pairs": 62,
+      "new_truth_pairs": 91,
+      "nonempty_mean_ndcg": {
+        "popularity": 0.28823105085253586,
+        "cbf": 0.3983448779937723,
+        "latest_buy": 0.5649490299971512,
+        "latest_buy_or_sell": 0.5635406518277756
+      }
+    },
+    "6-10": {
+      "users": 1038,
+      "active_users": 279,
+      "repeat_truth_pairs": 304,
+      "new_truth_pairs": 216,
+      "nonempty_mean_ndcg": {
+        "popularity": 0.2124548348216417,
+        "cbf": 0.22503612910135048,
+        "latest_buy": 0.46659777071546543,
+        "latest_buy_or_sell": 0.4574946185142353
+      }
+    },
+    "11+": {
+      "users": 737,
+      "active_users": 406,
+      "repeat_truth_pairs": 896,
+      "new_truth_pairs": 470,
+      "nonempty_mean_ndcg": {
+        "popularity": 0.16068228823870517,
+        "cbf": 0.12044690413117813,
+        "latest_buy": 0.3933568094823942,
+        "latest_buy_or_sell": 0.3631297284603537
+      }
+    }
+  },
+  "methods": {
+    "popularity": {
+      "repeat_hits": 615,
+      "new_hits": 137,
+      "repeat_ndcg_sum": 221.49038312459305,
+      "new_ndcg_sum": 50.81234441741685,
+      "group_mean_ndcg": {
+        "empty": 0.0,
+        "repeat_only": 0.31167022964776037,
+        "new_only": 0.11664380567748799,
+        "mixed": 0.20196385361108796
+      }
+    },
+    "cbf": {
+      "repeat_hits": 648,
+      "new_hits": 82,
+      "repeat_ndcg_sum": 263.46577577759547,
+      "new_ndcg_sum": 33.60139693536218,
+      "group_mean_ndcg": {
+        "empty": 0.0,
+        "repeat_only": 0.38928215374728825,
+        "new_only": 0.07195216907996334,
+        "mixed": 0.18238219455445098
+      }
+    },
+    "latest_buy": {
+      "repeat_hits": 1298,
+      "new_hits": 80,
+      "repeat_ndcg_sum": 521.2775832696611,
+      "new_ndcg_sum": 26.31429661500207,
+      "group_mean_ndcg": {
+        "empty": 0.0,
+        "repeat_only": 0.7278971558587055,
+        "new_only": 0.0640080281079777,
+        "mixed": 0.4057900026150575
+      }
+    },
+    "latest_buy_or_sell": {
+      "repeat_hits": 1268,
+      "new_hits": 83,
+      "repeat_ndcg_sum": 501.16939871533225,
+      "new_ndcg_sum": 28.507455124330647,
+      "group_mean_ndcg": {
+        "empty": 0.0,
+        "repeat_only": 0.7031569154692264,
+        "new_only": 0.06772255555634947,
+        "mixed": 0.3867435843504236
+      }
+    }
+  },
+  "cbf_candidate_coverage": {
+    "repeat_in_cbf_top50": 714,
+    "new_in_cbf_top50": 127
+  },
+  "feature_resolution": {
+    "distinct_feature_vectors": 280,
+    "assets_in_nonunique_feature_groups": 585,
+    "largest_group_size": 46,
+    "largest_groups": [
+      {
+        "assets": 46,
+        "features": [
+          "assetCategory=stock",
+          "marketID=xath"
+        ]
+      },
+      {
+        "assets": 43,
+        "features": [
+          "assetCategory=mtf",
+          "assetSubCategory=equity",
+          "marketID=xlux"
+        ]
+      },
+      {
+        "assets": 41,
+        "features": [
+          "assetCategory=mtf",
+          "assetSubCategory=bond",
+          "marketID=xlux"
+        ]
+      },
+      {
+        "assets": 28,
+        "features": [
+          "assetCategory=mtf",
+          "assetSubCategory=bond",
+          "marketID=cclx"
+        ]
+      },
+      {
+        "assets": 24,
+        "features": [
+          "assetCategory=mtf",
+          "assetSubCategory=equity",
+          "marketID=cclx"
+        ]
+      }
+    ]
+  },
+  "example": [
+    {
+      "user_id": "44A90E446962637F0AC0",
+      "past_assets_by_recency": [
+        {
+          "id": "GRS015003007",
+          "name": "ALPHA SERVICES AND HOLDINGS S.A.",
+          "last_buy": "2020-05-21",
+          "buy_count": 3
+        },
+        {
+          "id": "GRS393503008",
+          "name": "MYTILINAIOS SA",
+          "last_buy": "2020-05-21",
+          "buy_count": 1
+        },
+        {
+          "id": "GRS426003000",
+          "name": "MOTOR OIL REFINERIES SA",
+          "last_buy": "2020-05-21",
+          "buy_count": 1
+        },
+        {
+          "id": "GRS003003035",
+          "name": "NATIONAL BANK OF GREECE",
+          "last_buy": "2020-02-28",
+          "buy_count": 2
+        },
+        {
+          "id": "GRS323003012",
+          "name": "EUROBANK ERGASIAS SERVICES AND HOLDINGS S.A.",
+          "last_buy": "2020-01-15",
+          "buy_count": 1
+        }
+      ],
+      "latest_buy_top10": [
+        "GRS015003007",
+        "GRS393503008",
+        "GRS426003000",
+        "GRS003003035",
+        "GRS323003012",
+        "GRS014003032",
+        "GRC4261213D5",
+        "GRS434003000",
+        "GRS419003009",
+        "GRS191213008"
+      ],
+      "repeat_truth": [
+        "GRS003003035",
+        "GRS426003000"
+      ],
+      "new_truth": [
+        "GRS496003005"
+      ]
+    }
+  ],
+  "verification": {
+    "source_hashes_match_saved_protocol": true,
+    "all_latest_buy_lists_independently_reconstructed": true,
+    "all_saved_relevant_counts_match_reconstructed_truth": true,
+    "repeat_plus_new_ndcg_contributions_match_saved_metrics": true
+  },
+  "excluded_rows": {
+    "reconstructed_initial_position_rows": 38019
+  }
+}

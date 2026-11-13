@@ -1,0 +1,19 @@
+{
+  "status": "planned; no model inference or model-performance result reported",
+  "verified_from": [
+    "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B/raw/main/README.md",
+    "https://huggingface.co/api/models/Qwen/Qwen3-Embedding-0.6B"
+  ],
+  "verified_on": "2026-11-13",
+  "model_id": "Qwen/Qwen3-Embedding-0.6B",
+  "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "license": "Apache-2.0",
+  "embedding_dimension": 1024,
+  "freeze_weights": true,
+  "item_input": "Same pre-cutoff assetName, assetCategory, assetSubCategory, sector, industry and marketID values as the TF-IDF control; omit missing fields",
+  "pooling": "Last non-padding token, then L2 normalization; count-weighted history sum, then L2 normalization",
+  "generation_or_query_instruction": "None; symmetric item encoding with no generated text",
+  "primary_mixture_lambda": 1.0,
+  "timing_repeats": 5,
+  "funding_plan": "Local inference; no paid API calls planned. Record actual compute hours and any cloud charges."
+}

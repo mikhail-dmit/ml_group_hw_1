@@ -1,0 +1,260 @@
+{
+  "source": "https://researchdata.gla.ac.uk/1658/1/FAR-Trans.zip",
+  "source_doi": "10.5525/gla.researchdata.1658",
+  "transaction": {
+    "file": "transactions.csv",
+    "physical_line_including_header": 83760,
+    "record_id": "7438853",
+    "record": {
+      "customerID": "U001",
+      "ISIN": "GRS003003035",
+      "transactionID": "7438853",
+      "transactionType": "Buy",
+      "timestamp": "2020-01-14",
+      "totalValue": "1152.0",
+      "units": "400.0",
+      "channel": "Internet Banking",
+      "marketID": "XATH"
+    },
+    "field_statuses": {
+      "customerID": "observed",
+      "ISIN": "observed",
+      "transactionID": "observed",
+      "transactionType": "observed",
+      "timestamp": "observed",
+      "totalValue": "estimated",
+      "units": "observed",
+      "channel": "observed",
+      "marketID": "observed"
+    },
+    "field_provenance_notes": {
+      "totalValue": "Estimated/derived using units times closing price; FAR-Trans section 3.3.1",
+      "units": "Released share counts can be adjusted for stock splits; not guaranteed original raw units",
+      "timestamp": "Released transaction dates can be clipped to available price-series dates; original dates are not separately supplied"
+    },
+    "event_timestamp": "2020-01-14",
+    "window": "History before 2021-06-01",
+    "redaction": "Only customerID replaced with U001; all other field values are verbatim"
+  },
+  "cutoff_audits": {
+    "2021-05-01": {
+      "users": 10178,
+      "nonempty_truth_users": 1627,
+      "end_exclusive": "2021-05-31",
+      "customer_information": {
+        "raw_rows": 32468,
+        "raw_rows_at_or_after_cutoff": 7650,
+        "selected_profiles": 10178,
+        "selected_profile_timestamp_range": [
+          "2000-01-01",
+          "2021-04-29"
+        ],
+        "selected_profiles_with_placeholder_timestamp": 41,
+        "selected_profiles_with_placeholder_questionnaire_date": 705,
+        "selected_profiles_with_questionnaire_at_or_after_cutoff": 1324,
+        "selected_profiles_with_questionnaire_after_row_timestamp": 4187,
+        "field_status_counts": {
+          "customerType": {
+            "observed": 10178
+          },
+          "riskLevel": {
+            "observed": 9454,
+            "estimated": 704,
+            "missing": 20
+          },
+          "investmentCapacity": {
+            "observed": 9442,
+            "estimated": 716,
+            "missing": 20
+          }
+        },
+        "sample_profile": {
+          "customerID": "U001",
+          "customerType": "Mass",
+          "riskLevel": "Income",
+          "investmentCapacity": "CAP_LT30K",
+          "lastQuestionnaireDate": "2019-07-16",
+          "timestamp": "2020-01-14"
+        },
+        "future_questionnaire_example": {
+          "customerType": "Premium",
+          "riskLevel": "Income",
+          "investmentCapacity": "CAP_80K_300K",
+          "lastQuestionnaireDate": "2021-11-03",
+          "timestamp": "2021-03-19",
+          "customerID": "U002"
+        }
+      },
+      "asset_information": {
+        "raw_rows": 836,
+        "raw_unique_assets": 806,
+        "raw_rows_at_or_after_cutoff": 51,
+        "eligible_asof_assets": 764,
+        "selected_metadata_timestamp_range": [
+          "2018-01-01",
+          "2021-04-26"
+        ],
+        "selected_rows_at_or_after_cutoff": 0,
+        "missing_fields_in_eligible_assets": {
+          "assetName": 23,
+          "assetCategory": 0,
+          "assetSubCategory": 253,
+          "marketID": 0,
+          "sector": 365,
+          "industry": 409
+        },
+        "sample_asset": {
+          "ISIN": "GRS003003035",
+          "assetName": "NATIONAL BANK OF GREECE",
+          "assetShortName": "ΕΤΕ",
+          "assetCategory": "Stock",
+          "assetSubCategory": "Large Cap",
+          "marketID": "XATH",
+          "sector": "",
+          "industry": "",
+          "timestamp": "2018-01-02"
+        }
+      },
+      "limit_prices": {
+        "raw_rows": 807,
+        "rows_with_maxDate_at_or_after_cutoff": 596,
+        "eligible_assets_with_future_endpoint": 553,
+        "sample_limit_row": {
+          "ISIN": "GRS003003035",
+          "minDate": "2018-01-02",
+          "maxDate": "2022-11-29",
+          "priceMinDate": "3.24",
+          "priceMaxDate": "3.76",
+          "profitability": "0.1604938271604936"
+        },
+        "used_by_current_scorers_or_eligibility": false
+      },
+      "excluded_rows": {
+        "reconstructed_initial_position_rows": 38019
+      }
+    },
+    "2021-06-01": {
+      "users": 10404,
+      "nonempty_truth_users": 1178,
+      "end_exclusive": "2021-07-01",
+      "customer_information": {
+        "raw_rows": 32468,
+        "raw_rows_at_or_after_cutoff": 7321,
+        "selected_profiles": 10404,
+        "selected_profile_timestamp_range": [
+          "2000-01-01",
+          "2021-05-31"
+        ],
+        "selected_profiles_with_placeholder_timestamp": 41,
+        "selected_profiles_with_placeholder_questionnaire_date": 726,
+        "selected_profiles_with_questionnaire_at_or_after_cutoff": 1318,
+        "selected_profiles_with_questionnaire_after_row_timestamp": 4230,
+        "field_status_counts": {
+          "customerType": {
+            "observed": 10404
+          },
+          "riskLevel": {
+            "estimated": 725,
+            "observed": 9659,
+            "missing": 20
+          },
+          "investmentCapacity": {
+            "estimated": 738,
+            "observed": 9646,
+            "missing": 20
+          }
+        },
+        "sample_profile": {
+          "customerID": "U001",
+          "customerType": "Mass",
+          "riskLevel": "Income",
+          "investmentCapacity": "CAP_LT30K",
+          "lastQuestionnaireDate": "2019-07-16",
+          "timestamp": "2020-01-14"
+        },
+        "future_questionnaire_example": {
+          "customerType": "Premium",
+          "riskLevel": "Income",
+          "investmentCapacity": "CAP_80K_300K",
+          "lastQuestionnaireDate": "2021-11-03",
+          "timestamp": "2021-03-19",
+          "customerID": "U002"
+        }
+      },
+      "asset_information": {
+        "raw_rows": 836,
+        "raw_unique_assets": 806,
+        "raw_rows_at_or_after_cutoff": 47,
+        "eligible_asof_assets": 767,
+        "selected_metadata_timestamp_range": [
+          "2018-01-01",
+          "2021-05-26"
+        ],
+        "selected_rows_at_or_after_cutoff": 0,
+        "missing_fields_in_eligible_assets": {
+          "assetName": 23,
+          "assetCategory": 0,
+          "assetSubCategory": 253,
+          "marketID": 0,
+          "sector": 366,
+          "industry": 411
+        },
+        "sample_asset": {
+          "ISIN": "GRS003003035",
+          "assetName": "NATIONAL BANK OF GREECE",
+          "assetShortName": "ΕΤΕ",
+          "assetCategory": "Stock",
+          "assetSubCategory": "Large Cap",
+          "marketID": "XATH",
+          "sector": "",
+          "industry": "",
+          "timestamp": "2018-01-02"
+        }
+      },
+      "limit_prices": {
+        "raw_rows": 807,
+        "rows_with_maxDate_at_or_after_cutoff": 593,
+        "eligible_assets_with_future_endpoint": 553,
+        "sample_limit_row": {
+          "ISIN": "GRS003003035",
+          "minDate": "2018-01-02",
+          "maxDate": "2022-11-29",
+          "priceMinDate": "3.24",
+          "priceMaxDate": "3.76",
+          "profitability": "0.1604938271604936"
+        },
+        "used_by_current_scorers_or_eligibility": false
+      },
+      "excluded_rows": {
+        "reconstructed_initial_position_rows": 38019
+      }
+    }
+  },
+  "sample_latest_pre_june_close_price": {
+    "ISIN": "GRS003003035",
+    "timestamp": "2021-05-31",
+    "closePrice": "2.584"
+  },
+  "sample_transaction_date_close_price": {
+    "ISIN": "GRS003003035",
+    "timestamp": "2020-01-14",
+    "closePrice": "2.88"
+  },
+  "verification": {
+    "source_hashes_match_saved_june_protocol": true,
+    "sample_is_retained_history_for_both_cutoffs": true,
+    "limit_price_endpoints_match_close_prices": {
+      "first": true,
+      "last": true
+    },
+    "sample_totalValue_matches_units_times_released_close_price": true,
+    "limit_profitability_matches_realized_endpoint_return": true
+  },
+  "source_sha256": {
+    "transactions.csv": "358871fa1311a802799df86e56c3d633513566965b01412d058e0f8fbe6cd54b",
+    "customer_information.csv": "c4ad52ebca90e32bf3df5eb64f362b7a3437b77d978b22627cc46927fe7064af",
+    "asset_information.csv": "33f9897b14087068fba53a0bc9e24a0031b096bd3ad3e977e534153f29b7a590",
+    "limit_prices.csv": "b5a9bc304e2a4a31f5e3d0959b22c5c6135b69f13ce6f92123fc7e1e92600c8f",
+    "README.txt": "5aa20b492c9fe18c8b5a147ad13fae99862c78aea59cbf542b734b5eef9ea072"
+  }
+}

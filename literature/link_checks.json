@@ -1,0 +1,128 @@
+{
+  "checked_on": "2026-11-13",
+  "checked_by": "AI assistant using webfetch and full-text section reads",
+  "scope": "Five selected primary studies; not an exhaustive systematic review",
+  "selection_update": "FLARKO replaces Recformer as reference 4 in the revised review and report source; former Recformer-dependent citations corrected",
+  "supplementary_papers": [
+    {
+      "title": "Text Is All You Need: Learning Language Representations for Sequential Recommendation",
+      "full_text_url": "https://arxiv.org/html/2305.13731v2",
+      "version_read": "2305.13731v2",
+      "full_text_retrieved": true,
+      "authors": ["Jiacheng Li", "Ming Wang", "Jin Li", "Jinmiao Fu", "Xin Shen", "Jingbo Shang", "Julian McAuley"],
+      "venue": "Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "year": 2023,
+      "pages": "1258-1267",
+      "doi": "10.1145/3580305.3599519",
+      "verification_urls": [
+        "https://api.crossref.org/works/10.1145/3580305.3599519",
+        "https://doi.org/10.1145/3580305.3599519"
+      ],
+      "verification_content_retrieved": true,
+      "selection_status": "Retained supplementary reading; omitted from revised compact five-study table"
+    }
+  ],
+  "papers": [
+    {
+      "reference": 1,
+      "title": "FAR-Trans: An Investment Dataset for Financial Asset Recommendation",
+      "full_text_url": "https://arxiv.org/html/2407.08692",
+      "version_read": "2407.08692v1",
+      "full_text_retrieved": true,
+      "sections_read": "1-6, including dataset preprocessing, task/splits, metrics, algorithms and results",
+      "authors": ["Javier Sanz-Cruzado", "Nikolaos Droukas", "Richard McCreadie"],
+      "venue": "IJCAI-24 Workshop on Recommender Systems in Finance (Fin-RecSys)",
+      "year": 2024,
+      "verification_urls": [
+        "https://eprints.gla.ac.uk/328250/",
+        "https://sites.google.com/view/fin-recsys2024/program"
+      ],
+      "verification_content_retrieved": true,
+      "qualification": "Workshop paper, not IJCAI main track; dataset DOI is not the paper DOI"
+    },
+    {
+      "reference": 2,
+      "title": "RepeatNet: A Repeat Aware Neural Recommendation Machine for Session-Based Recommendation",
+      "full_text_url": "https://arxiv.org/html/1812.02646v1",
+      "version_read": "1812.02646v1",
+      "full_text_retrieved": true,
+      "sections_read": "1-6, including model, experiments, repeat/non-repeat and component ablations",
+      "authors": ["Pengjie Ren", "Zhumin Chen", "Jing Li", "Zhaochun Ren", "Jun Ma", "Maarten de Rijke"],
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "year": 2019,
+      "volume": "33",
+      "issue": "1",
+      "pages": "4806-4813",
+      "doi": "10.1609/aaai.v33i01.33014806",
+      "verification_urls": [
+        "https://api.crossref.org/works/10.1609/aaai.v33i01.33014806",
+        "https://doi.org/10.1609/aaai.v33i01.33014806"
+      ],
+      "verification_content_retrieved": true,
+      "qualification": "2018 is the preprint year; 2019 is the verified proceedings publication year"
+    },
+    {
+      "reference": 3,
+      "title": "Towards Universal Sequence Representation Learning for Recommender Systems",
+      "full_text_url": "https://arxiv.org/html/2206.05941v1",
+      "version_read": "2206.05941v1",
+      "full_text_retrieved": true,
+      "sections_read": "1-5, including item encoding/adaptation, setup, full-pool evaluation, ablations and long-tail analysis",
+      "authors": ["Yupeng Hou", "Shanlei Mu", "Wayne Xin Zhao", "Yaliang Li", "Bolin Ding", "Ji-Rong Wen"],
+      "venue": "Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "year": 2022,
+      "pages": "585-593",
+      "doi": "10.1145/3534678.3539381",
+      "verification_urls": [
+        "https://api.crossref.org/works/10.1145/3534678.3539381",
+        "https://doi.org/10.1145/3534678.3539381"
+      ],
+      "verification_content_retrieved": true
+    },
+    {
+      "reference": 4,
+      "title": "Aligning Language Models with Investor and Market Behavior for Financial Recommendations",
+      "full_text_url": "https://arxiv.org/html/2510.15993",
+      "version_read": "2510.15993v1",
+      "full_text_retrieved": true,
+      "sections_read": "1-9, including graphs/prompts, KTO labels, federated setup, exact evaluation timeline, metrics, ablations and baseline comparison",
+      "authors": ["Fernando Spadea", "Oshani Seneviratne"],
+      "venue": "Proceedings of the 6th ACM International Conference on AI in Finance",
+      "year": 2025,
+      "pages": "509-517",
+      "doi": "10.1145/3768292.3770399",
+      "verification_urls": [
+        "https://arxiv.org/abs/2510.15993",
+        "https://api.crossref.org/works/10.1145/3768292.3770399",
+        "https://doi.org/10.1145/3768292.3770399"
+      ],
+      "verification_content_retrieved": true,
+      "qualification": "FLARKO: fine-tuned generative Qwen3 with 180-day Pref@3/Prof@3/Comb@3, not frozen Qwen3-Embedding or our cohort/metric protocol"
+    },
+    {
+      "reference": 5,
+      "title": "Where to Go Next for Recommender Systems? ID- vs. Modality-based Recommender Models Revisited",
+      "full_text_url": "https://arxiv.org/html/2303.13835",
+      "version_read": "2303.13835v4",
+      "full_text_retrieved": true,
+      "sections_read": "1-9 and Appendix A.1, including frozen-vs-E2E, costs, fusion and cold/new item definitions",
+      "authors": ["Zheng Yuan", "Fajie Yuan", "Yu Song", "Youhua Li", "Junchen Fu", "Fei Yang", "Yunzhu Pan", "Yongxin Ni"],
+      "venue": "Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval",
+      "year": 2023,
+      "pages": "2639-2649",
+      "doi": "10.1145/3539618.3591932",
+      "verification_urls": [
+        "https://api.crossref.org/works/10.1145/3539618.3591932",
+        "https://doi.org/10.1145/3539618.3591932"
+      ],
+      "verification_content_retrieved": true,
+      "qualification": "A first Crossref request was rate-limited; a later request succeeded"
+    }
+  ],
+  "access_notes": [
+    "All five full-text links above returned the article bodies, not just abstracts or challenge pages.",
+    "DOI resolver checks returned matching formatted citation metadata; full article reading used the open arXiv HTML versions.",
+    "An exploratory guessed AAAI article path and DBLP search encountered anti-bot pages and were not used as verification evidence. The correct RepeatNet DOI and Crossref record were verified separately.",
+    "Search snippets were used for discovery only; method and evaluation claims were checked against full texts."
+  ]
+}

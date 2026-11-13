@@ -1,0 +1,315 @@
+{
+  "user_id": "5180B50A10AAD1C7D0F8",
+  "demo_position_one_based": 94,
+  "protocol_hash": "50efd4aeb415ba6f0c66dd0793a7c2033cdc32a42b86b58eebbca3e81eaf3417",
+  "distinct_history_assets": 13,
+  "new_truth_assets": 1,
+  "new_truth_assets_even_including_initial_positions": 1,
+  "repeat_truth_assets": 1,
+  "future_buy_rows": [
+    {
+      "transactionID": "9043884",
+      "ISIN": "GRS343313003",
+      "timestamp": "2021-06-07",
+      "source_line": 181257,
+      "assetName": "INTRALOT SA",
+      "repeat_or_new": "repeat",
+      "retained_pre_cutoff_buy_count": 4,
+      "last_pre_cutoff_buy": "2020-03-09"
+    },
+    {
+      "transactionID": "9085857",
+      "ISIN": "GRS372003004",
+      "timestamp": "2021-06-14",
+      "source_line": 306174,
+      "assetName": "IKTINOS HELLAS S.A (CR)",
+      "repeat_or_new": "new",
+      "retained_pre_cutoff_buy_count": 0,
+      "last_pre_cutoff_buy": null
+    },
+    {
+      "transactionID": "9125353",
+      "ISIN": "GRS372003004",
+      "timestamp": "2021-06-23",
+      "source_line": 306175,
+      "assetName": "IKTINOS HELLAS S.A (CR)",
+      "repeat_or_new": "new",
+      "retained_pre_cutoff_buy_count": 0,
+      "last_pre_cutoff_buy": null
+    }
+  ],
+  "truth": [
+    "GRS343313003",
+    "GRS372003004"
+  ],
+  "idcg_terms": [
+    1.0,
+    0.6309297535714575
+  ],
+  "excluded_initial_positions_for_truth_assets": [
+    {
+      "ISIN": "GRS343313003",
+      "transactionID": "-22280",
+      "timestamp": "2018-01-02",
+      "source_line": 181252
+    }
+  ],
+  "history_prefix": [
+    {
+      "ISIN": "GRS434003000",
+      "last_buy": "2021-02-11",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRS003003035",
+      "last_buy": "2021-01-05",
+      "buy_count": 2
+    },
+    {
+      "ISIN": "GRS014003032",
+      "last_buy": "2020-12-17",
+      "buy_count": 3
+    },
+    {
+      "ISIN": "GRS337003008",
+      "last_buy": "2020-12-01",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRS426003000",
+      "last_buy": "2020-11-16",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRS015003007",
+      "last_buy": "2020-10-26",
+      "buy_count": 6
+    },
+    {
+      "ISIN": "GRS432003028",
+      "last_buy": "2020-06-26",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRS065003014",
+      "last_buy": "2020-04-16",
+      "buy_count": 1
+    },
+    {
+      "ISIN": "GRS412503005",
+      "last_buy": "2020-03-17",
+      "buy_count": 2
+    },
+    {
+      "ISIN": "GRS191213008",
+      "last_buy": "2020-03-12",
+      "buy_count": 4
+    }
+  ],
+  "predictions": {
+    "latest_buy": [
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "1",
+        "ISIN": "GRS434003000",
+        "source_line": 3742,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "2",
+        "ISIN": "GRS003003035",
+        "source_line": 3743,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "3",
+        "ISIN": "GRS014003032",
+        "source_line": 3744,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "4",
+        "ISIN": "GRS337003008",
+        "source_line": 3745,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "5",
+        "ISIN": "GRS426003000",
+        "source_line": 3746,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "6",
+        "ISIN": "GRS015003007",
+        "source_line": 3747,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "7",
+        "ISIN": "GRS432003028",
+        "source_line": 3748,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "8",
+        "ISIN": "GRS065003014",
+        "source_line": 3749,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "9",
+        "ISIN": "GRS412503005",
+        "source_line": 3750,
+        "relevant": false
+      },
+      {
+        "method": "latest_buy",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "10",
+        "ISIN": "GRS191213008",
+        "source_line": 3751,
+        "relevant": false
+      }
+    ],
+    "popularity": [
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "1",
+        "ISIN": "GRS003003035",
+        "source_line": 3722,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "2",
+        "ISIN": "GRS015003007",
+        "source_line": 3723,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "3",
+        "ISIN": "GRS014003032",
+        "source_line": 3724,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "4",
+        "ISIN": "GRC4261213D5",
+        "source_line": 3725,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "5",
+        "ISIN": "GRS323003012",
+        "source_line": 3726,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "6",
+        "ISIN": "GRS434003000",
+        "source_line": 3727,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "7",
+        "ISIN": "GRS393503008",
+        "source_line": 3728,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "8",
+        "ISIN": "GRS419003009",
+        "source_line": 3729,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "9",
+        "ISIN": "GRS426003000",
+        "source_line": 3730,
+        "relevant": false
+      },
+      {
+        "method": "popularity",
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "rank": "10",
+        "ISIN": "GRS191213008",
+        "source_line": 3731,
+        "relevant": false
+      }
+    ]
+  },
+  "calculations": {
+    "latest_buy": {
+      "hit_ranks": [],
+      "dcg_terms": [],
+      "dcg": 0,
+      "idcg": 1.6309297535714575,
+      "ndcg": 0.0,
+      "saved_ndcg": 0.0,
+      "absolute_difference": 0.0,
+      "per_user_csv_row": {
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "method": "latest_buy",
+        "relevant_count": "2",
+        "ndcg_at_10": "0.0",
+        "source_line": 376
+      }
+    },
+    "popularity": {
+      "hit_ranks": [],
+      "dcg_terms": [],
+      "dcg": 0,
+      "idcg": 1.6309297535714575,
+      "ndcg": 0.0,
+      "saved_ndcg": 0.0,
+      "absolute_difference": 0.0,
+      "per_user_csv_row": {
+        "user_id": "5180B50A10AAD1C7D0F8",
+        "method": "popularity",
+        "relevant_count": "2",
+        "ndcg_at_10": "0.0",
+        "source_line": 374
+      }
+    }
+  },
+  "verification": {
+    "at_least_one_future_asset_has_no_retained_pre_cutoff_buys": true,
+    "at_least_one_future_asset_absent_even_from_initial_positions": true,
+    "latest_buy_top10_reconstructed_from_history_and_popularity": true,
+    "independent_calculations_match_saved_per_user": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "validation_cutoff": "2021-05-01",
+  "validation_end_exclusive": "2021-05-31",
+  "test_cutoff": "2021-06-01",
+  "grid": [
+    0.0,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0
+  ],
+  "selected": {
+    "cbf": {
+      "lambda": 1.0,
+      "validation_method": "cbf_lambda_1",
+      "validation_metrics": {
+        "users": 10178,
+        "nonempty_truth_users": 1627,
+        "empty_truth_users": 8551,
+        "ndcg_at_10": 0.09115134315527343,
+        "ndcg_at_10_nonempty": 0.5702141183985082,
+        "relevant_pairs_retrieved": {
+          "repeat": 2047,
+          "new": 250
+        }
+      }
+    },
+    "tfidf": {
+      "lambda": 1.0,
+      "validation_method": "tfidf_lambda_1",
+      "validation_metrics": {
+        "users": 10178,
+        "nonempty_truth_users": 1627,
+        "empty_truth_users": 8551,
+        "ndcg_at_10": 0.0911228603323309,
+        "ndcg_at_10_nonempty": 0.5700359388214283,
+        "relevant_pairs_retrieved": {
+          "repeat": 2047,
+          "new": 246
+        }
+      }
+    }
+  },
+  "selection_metric": "All-user mean nDCG@10",
+  "ties": "Smallest lambda",
+  "normalization": "Popularity divided by maximum over all as-of eligible assets",
+  "source_sha256": {
+    "transactions.csv": "358871fa1311a802799df86e56c3d633513566965b01412d058e0f8fbe6cd54b",
+    "asset_information.csv": "33f9897b14087068fba53a0bc9e24a0031b096bd3ad3e977e534153f29b7a590",
+    "customer_information.csv": "c4ad52ebca90e32bf3df5eb64f362b7a3437b77d978b22627cc46927fe7064af",
+    "close_prices.csv": "6ba1fe8390b31dfb3ab4e3e824910f9e8da4684cb6074cdb82eb6422a323656d"
+  },
+  "code_sha256": {
+    "analysis/tune_fill_mixture.py": "1a26f6ae0d8affb85d691b8873b2b097bb57cbfc91649c780d704300406e1635",
+    "analysis/fill_experiment.py": "10d7bccbe7ec767615c64de8620b72e2dbe4383eed3ee055b8f9b0db416a7df2",
+    "starter/starter.py": "c19b21adeb824737d09835fb5b8818e2d310fee83e5af909eaf8897ea1705b24"
+  },
+  "validation_metrics_sha256": "ad77381bf3113d5b60225ef225a435d814b2a4db4ba4010f97a1ece15b28962d"
+}
